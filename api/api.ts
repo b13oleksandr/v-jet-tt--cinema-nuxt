@@ -29,7 +29,7 @@ export const fetMoviesSessions = (
 ) => {
   axios
     .get(
-      `https://cinema-api-test.y-media.io/v1/movieShows?movie_id=${movieId}}`
+      `https://cinema-api-test.y-media.io/v1/movieShows?movie_id=${movieId}`
     )
     .then((response: any) => {
       callback(response.data.data);

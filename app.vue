@@ -44,6 +44,8 @@ export default defineComponent({
     AppContainer,
   },
 
+  scrollToTop: true,
+
   setup: function () {
     const list = ref();
     const query = ref("");
