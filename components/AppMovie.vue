@@ -52,7 +52,8 @@
     </div>
   </div>
 
-  <ui-popup v-model="showPlacesPopup" width="600px" title="Виберіть місце">
+  <!-- select place popup  -->
+  <ui-popup v-model="showPlacesPopup" @close="onPopupClose" width="600px" title="Виберіть місце">
     <div>
       <div class="flex flex-wrap -mx-2">
         <div class="flex-grid-50 px-2">
@@ -274,6 +275,10 @@ export default defineComponent({
       });
     };
 
+    const onPopupClose = (): void => {
+      ticket.value = null
+    };
+
     const onMakeOrder = (): void => {
       bookPlace(
         props.movie.id,
@@ -307,6 +312,7 @@ export default defineComponent({
       onMakeOrder,
       ticket,
       formatDate,
+      onPopupClose
     };
   },
 });

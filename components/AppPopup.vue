@@ -93,6 +93,7 @@ export default {
   methods: {
     onClose() {
       this.$emit("update:model-value", false);
+      this.$emit("close", false);
     },
   },
 };
