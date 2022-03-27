@@ -44,8 +44,6 @@ export default defineComponent({
     AppContainer,
   },
 
-  scrollToTop: true,
-
   setup: function () {
     const list = ref();
     const query = ref("");
@@ -61,6 +59,8 @@ export default defineComponent({
     };
 
     const onMovie = (id: number) => {
+      window.scrollTo(0, 0)
+
       fetchMovies({ movie_id: id }, (data: any) => {
         if (data.length) {
           selectedMovie.value = data[0];
