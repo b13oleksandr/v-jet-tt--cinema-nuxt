@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #111828;
+}
+
+/* Makes scroll invisible */
+.invisible-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.invisible-scroll::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
+  background: transparent !important;
+}
