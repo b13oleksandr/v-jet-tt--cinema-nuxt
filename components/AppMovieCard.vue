@@ -38,8 +38,8 @@ export default defineComponent({
   },
 
   setup(_, { emit }) {
-    const onMovie = () => {
-      emit("movie");
+    const onMovie = (id) => {
+      emit("movie", id);
     };
 
     return {
